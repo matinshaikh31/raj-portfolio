@@ -7,12 +7,12 @@ const Navbar = () => {
 
   return (
     <div className="flex justify-between items-start text-sm text-[#A1A1A1]">
-      <div className="flex gap-2 items-center font-semibold">
+      <div className="flex gap-2 items-center font-semibold text-lg">
         <span>By Raj</span>
         <sup className="text-xs align-top">©</sup>
       </div>
-      <span>(Product & Visual Designer)</span>
-      <div className="hidden sm:flex gap-4">
+      <span className="text-lg">(Product & Visual Designer)</span>
+      <div className="hidden sm:flex gap-4 text-lg">
         <a href="#" className="hover:text-white transition">
           Services
         </a>

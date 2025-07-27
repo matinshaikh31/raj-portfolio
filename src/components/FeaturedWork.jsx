@@ -1,4 +1,5 @@
 import React from "react";
+import ProjectCard from "./card/ProjectCard";
 
 const projects = [
   {
@@ -11,93 +12,93 @@ const projects = [
     title: "Honigdachs",
     subtitle: "UI/UX Design / Agency Website",
     year: "2024",
-    image: "src/assets/images/work/w1.png",
+    image: "src/assets/images/work/w2.png",
   },
   {
     title: "Unboxing Community",
     subtitle: "App design / Consumer strategy",
     year: "2023",
-    image: "src/assets/images/work/w1.png",
+    image: "src/assets/images/work/w3.png",
   },
   {
     title: "Motion Design",
     subtitle: "Motion / Micro Interaction",
     year: "2019",
-    image: "src/assets/images/work/w1.png",
+    image: "src/assets/images/work/w4.png",
   },
   {
     title: "Neuramonks",
     subtitle: "UI/UX design / Motion Design",
     year: "2017",
-    image: "src/assets/images/work/w1.png",
+    image: "src/assets/images/work/w5.png",
   },
 ];
 
 export default function FeaturedWork() {
   return (
-    <section className=" text-white font-sans px-6 md:px-16 lg:px-24 py-24">
-      <div className="text-center mb-16">
-        <p className="text-[#A1A1A1] text-sm">// THE HALL OF FAME //</p>
-        <h2 className="text-5xl font-serif mt-2">
+    <section className="bg-[#0f0d0d] text-white font-sansBody px-6 md:px-16 lg:px-24 py-24">
+      <div className="text-center mb-16 px-4">
+        {/* Subtitle */}
+        <p className="text-[#A1A1A1] text-xs md:text-sm tracking-widest uppercase font-sansBody">
+          // THE HALL OF FAME //
+        </p>
+
+        {/* Title */}
+        <h2 className="mt-2 text-[14vw] sm:text-[12vw] md:text-[10vw] lg:text-[8vw] xl:text-[7vw] font-serif leading-none">
           <span className="block">FEATURED</span>
-          <span className="inline-block border-t-4 border-[#FF6C4F] mt-[-12px] pt-1 font-bold">
-            WORK
-          </span>
+          <div className="mt-4 flex justify-center items-center gap-4">
+            {/* Line */}
+            <div className="w-30 h-[10px] bg-[#FF6C4F] rounded-full"></div>
+
+            {/* WORK */}
+            <span className="text-white text-[14vw] sm:text-[12vw] md:text-[10vw] lg:text-[8vw] xl:text-[7vw] font-extrabold tracking-tight">
+              WORK
+            </span>
+          </div>
         </h2>
+        {/* Line + WORK in one row, centered */}
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-        {/* First two side by side */}
-        {projects.slice(0, 2).map((project, index) => (
-          <div key={index} className="bg-[#1B1B1B] rounded-md overflow-hidden">
-            <img
-              src={project.image}
-              alt={project.title}
-              className="w-full object-cover"
-            />
-            <div className="p-4">
-              <h3 className="text-lg font-semibold mb-1">{project.title}</h3>
-              <p className="text-sm text-[#A1A1A1]">{project.subtitle}</p>
-              <p className="text-sm text-[#A1A1A1] mt-2">@{project.year}</p>
-            </div>
-          </div>
-        ))}
-
-        {/* Large Centered Image */}
-        <div className="md:col-span-2">
-          <div className="bg-[#1B1B1B] rounded-md overflow-hidden">
-            <img
-              src="src/assets/images/work/w1.png"
-              alt="Unboxing Community"
-              className="w-full object-cover"
-            />
-            <div className="p-4">
-              <h3 className="text-lg font-semibold mb-1">Unboxing Community</h3>
-              <p className="text-sm text-[#A1A1A1]">
-                App design / Consumer strategy
-              </p>
-              <p className="text-sm text-[#A1A1A1] mt-2">@2023</p>
-            </div>
-          </div>
+      {/* Masonry Grid Layout */}
+      <div className="max-w-7xl mx-auto">
+        {/* Row 1: Two cards side by side */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <ProjectCard
+            project={projects[0]}
+            height="medium"
+            gradientClass="card-gradient-1"
+          />
+          <ProjectCard
+            project={projects[1]}
+            height="medium"
+            gradientClass="card-gradient-2"
+          />
         </div>
 
-        {/* Last two side by side */}
-        {projects.slice(3).map((project, index) => (
-          <div key={index} className="bg-[#1B1B1B] rounded-md overflow-hidden">
-            <img
-              src={project.image}
-              alt={project.title}
-              className="w-full object-cover"
-            />
-            <div className="p-4">
-              <h3 className="text-lg font-semibold mb-1">{project.title}</h3>
-              <p className="text-sm text-[#A1A1A1]">{project.subtitle}</p>
-              <p className="text-sm text-[#A1A1A1] mt-2">@{project.year}</p>
-            </div>
-          </div>
-        ))}
+        {/* Row 2: Full width card */}
+        <div className="mb-6">
+          <ProjectCard
+            project={projects[2]}
+            height="wide"
+            gradientClass="card-gradient-3"
+          />
+        </div>
+
+        {/* Row 3: Two cards side by side */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <ProjectCard
+            project={projects[3]}
+            height="medium"
+            gradientClass="card-gradient-4"
+          />
+          <ProjectCard
+            project={projects[4]}
+            height="medium"
+            gradientClass="card-gradient-5"
+          />
+        </div>
       </div>
-      <img src="src\assets\images\work\nuv.png" alt="Unboxing Community" />
+      <img src="src/assets/images/work/nuv.png" alt="Line" className="w-full" />
     </section>
   );
 }

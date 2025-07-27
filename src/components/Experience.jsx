@@ -26,40 +26,50 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section className=" text-white px-6 md:px-16 lg:px-24 py-20 font-sans">
-      {/* Top Section Label */}
-      <div className="flex justify-between text-xs border-b border-[#1F1F1F] pb-4 text-[#A1A1A1]">
-        <span>07</span>
-        <span>//EXPERIENCE</span>
-        <span>2013 – PRESENT</span>
+    <section className=" text-white px-6 md:px-24 py-20 font-sans">
+      {/* Top Floating Meta Over Line */}
+      <div className="relative mb-20">
+        <div className="border-b border-[#2C2C2C] mb-2"></div>
+        <div className="relative z-10 flex justify-between text-xs text-[#A1A1A1] px-2 w-full">
+          <span>07</span>
+          <span>//EXPERIENCE</span>
+          <span>2013 – PRESENT</span>
+        </div>
       </div>
 
-      {/* Section Heading */}
-      <div className="mt-12 mb-10">
-        <h2 className="text-4xl font-bold">EXPERIENCE</h2>
-      </div>
+      {/* Main Two-Column Layout */}
+      <div className="flex flex-col md:flex-row gap-12">
+        {/* Left - Heading */}
+        <div className="md:w-1/3">
+          <h2 className="text-4xl font-bold">EXPERIENCE</h2>
+        </div>
 
-      {/* Experience List */}
-      <div className="space-y-12">
-        {experiences.map((exp, index) => (
-          <div
-            key={index}
-            className="border-b border-[#1F1F1F] pb-6 flex flex-col md:flex-row justify-between gap-4"
-          >
-            <div>
-              <h3 className="text-xl font-bold uppercase">{exp.company}</h3>
-              <p className="text-xs font-semibold text-[#A1A1A1] mt-1">
-                {exp.role}
-              </p>
-              <p className="text-sm text-[#A1A1A1] mt-2 max-w-xl leading-relaxed">
-                {exp.description}
-              </p>
+        {/* Right - Experience List */}
+        <div className="flex-1 space-y-16 pt-20">
+          {experiences.map((exp, index) => (
+            <div key={index} className="relative">
+              {/* Line ABOVE each experience card */}
+              <div className="border-b border-[#2C2C2C] absolute top-0 left-0 w-full -translate-y-3"></div>
+
+              <div className="flex flex-col md:flex-row justify-between pt-6">
+                <div>
+                  <h3 className="text-xl font-semibold uppercase">
+                    {exp.company}
+                  </h3>
+                  <p className="text-xs text-[#A1A1A1] mt-1 font-medium">
+                    {exp.role}
+                  </p>
+                  <p className="text-sm text-[#A1A1A1] mt-3 max-w-2xl leading-relaxed">
+                    {exp.description}
+                  </p>
+                </div>
+                <p className="text-sm text-[#A1A1A1] whitespace-nowrap mt-4 md:mt-0 md:text-right">
+                  {exp.date}
+                </p>
+              </div>
             </div>
-            <div className="text-sm text-[#A1A1A1] md:text-right whitespace-nowrap mt-2 md:mt-0">
-              {exp.date}
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

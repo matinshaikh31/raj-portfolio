@@ -32,7 +32,54 @@ export default function StackToolsSection() {
     },
   ];
 
-  return (
+  return true ? (
+    <section className=" text-white px-6 md:px-24 py-20 font-sans">
+      {/* Top Floating Meta Over Line */}
+      <div className="relative mb-20">
+        <div className="border-b border-[#2C2C2C] mb-2"></div>
+        <div className="relative z-10 flex justify-between text-xs text-[#A1A1A1] px-2 w-full">
+          <span>010</span>
+          <span>EXPERTISE</span>
+          <span>SUB TITLE</span>
+        </div>
+      </div>
+
+      {/* Main Two-Column Layout */}
+      <div className="flex flex-col md:flex-row gap-12">
+        {/* Left - Heading */}
+        <div className="md:w-1/3">
+          <h2 className="text-4xl font-bold">EXPERIENCE</h2>
+        </div>
+
+        {/* Right - Experience List */}
+        <div className="flex-1 space-y-16 pt-20">
+          {tools.map((tool, index) => (
+            <div key={index} className="relative">
+              {/* Line ABOVE each experience card */}
+              <div className="border-b border-[#2C2C2C] absolute top-0 left-0 w-full -translate-y-3"></div>
+
+              <div className="flex flex-col md:flex-row justify-between pt-6">
+                <div>
+                  <h3 className="text-xl font-semibold uppercase">
+                    {tool.name}
+                  </h3>
+                  <p className="text-xs text-[#A1A1A1] mt-3 font-medium">
+                    {tool.role}
+                  </p>
+                  <p className="text-sm text-[#A1A1A1] mt-3 max-w-xl leading-relaxed">
+                    {tool.desc}
+                  </p>
+                </div>
+                <p className="text-sm text-[#A1A1A1] whitespace-nowrap mt-4 md:mt-0 md:text-right">
+                  {tool.percent}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  ) : (
     <section className=" text-white font-sans px-6 md:px-16 lg:px-24 py-20">
       <div className="flex justify-between items-center text-sm text-[#A1A1A1] border-b border-[#2C2C2C] pb-2">
         <span>010</span>

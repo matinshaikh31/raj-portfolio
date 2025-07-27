@@ -10,10 +10,15 @@ export default function ServiceSection() {
       <div className="space-y-12">
         {/* Item 1 */}
         <div className="flex flex-col md:flex-row justify-between items-start border-b border-[#2C2C2C] pb-8">
-          <div className="flex items-baseline gap-4">
-            <span className="text-[#FF6C4F] font-bold">[02]</span>
-            <h4 className="text-3xl font-bold">UI/UX design</h4>
+          {/* Left Side - [02] slightly above and left of the title */}
+          <div className="flex items-start gap-8 relative">
+            <span className="text-[#FF6C4F] font-bold text-lg relative top-2">
+              [02]
+            </span>
+            <h4 className="text-5xl font-bold">UI/UX design</h4>
           </div>
+
+          {/* Right Side - Description */}
           <p className="text-[#A1A1A1] text-right text-sm md:max-w-sm mt-4 md:mt-0">
             / User-centric approach / Seamless navigation /<br />
             Intuitive Interfaces
@@ -22,9 +27,11 @@ export default function ServiceSection() {
 
         {/* Item 2 */}
         <div className="flex flex-col md:flex-row justify-between items-start border-b border-[#2C2C2C] pb-8">
-          <div className="flex items-baseline gap-4">
-            <span className="text-[#FF6C4F] font-bold">[03]</span>
-            <h4 className="text-3xl font-bold">Branding & identity</h4>
+          <div className="flex items-start gap-8 relative">
+            <span className="text-[#FF6C4F] font-bold text-lg relative top-2">
+              [03]
+            </span>
+            <h4 className="text-5xl font-bold">Branding & identity</h4>
           </div>
           <p className="text-[#A1A1A1] text-right text-sm md:max-w-sm mt-4 md:mt-0">
             / Memorable & unique / Consistent brand voice /<br />
@@ -34,9 +41,11 @@ export default function ServiceSection() {
 
         {/* Item 3 */}
         <div className="flex flex-col md:flex-row justify-between items-start border-b border-[#2C2C2C] pb-8">
-          <div className="flex items-baseline gap-4">
-            <span className="text-[#FF6C4F] font-bold">[05]</span>
-            <h4 className="text-3xl font-bold">Motion Design</h4>
+          <div className="flex items-start gap-8 relative">
+            <span className="text-[#FF6C4F] font-bold text-lg relative top-2">
+              [05]
+            </span>
+            <h4 className="text-5xl font-bold">Motion Design</h4>
           </div>
           <p className="text-[#A1A1A1] text-right text-sm md:max-w-sm mt-4 md:mt-0">
             / User-friendly shopping / Secure payment gateways

@@ -29,9 +29,9 @@ const TrustedSection = () => {
     <section className=" text-white px-6 md:px-20 py-20 font-sans">
       {/* Heading and Testimonials Label */}
       <div className="relative mb-50">
-        <h2 className="text-[48px] md:text-[60px] leading-tight font-light">
+        <h2 className="text-[14vw] sm:text-[12vw] md:text-[10vw] lg:text-[8vw] xl:text-[7vw] leading-tight font-light">
           <span className="font-serif block">TRUSTED</span>
-          <span className="font-extrabold block">BY FOUNDERS</span>
+          <span className="font-bold block">BY FOUNDERS</span>
         </h2>
 
         <div className="absolute left-0 mt-6 md:mt-10 md:ml-[280px] max-w-xl">

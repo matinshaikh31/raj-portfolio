@@ -1,4 +1,4 @@
-import { FaArrowUpRightFromSquare, FaGlobe } from 'react-icons/fa6';
+import { FaArrowUpRightFromSquare, FaGlobe } from "react-icons/fa6";
 
 const CTASection = () => {
   return (
@@ -7,9 +7,9 @@ const CTASection = () => {
       <p className="text-sm text-gray-400 mb-6">(Need an unfair advantage?)</p>
 
       {/* Heading */}
-      <h2 className="text-[42px] md:text-[64px] leading-tight font-light mb-10">
+      <h2 className="text-[14vw] sm:text-[12vw] md:text-[10vw] lg:text-[8vw] xl:text-[7vw] leading-tight font-light mb-10">
         <span className="font-serif block">LET’S MAKE</span>
-        <span className="font-extrabold block text-white">IT HAPPEN</span>
+        <span className="font-bold block text-white">IT HAPPEN</span>
       </h2>
 
       {/* CTA Button */}
