@@ -1,5 +1,6 @@
 import React from "react";
 import { GoArrowUpRight } from "react-icons/go";
+import heroImg from "../assets/images/heroimg.png";
 
 export default function HeroSection() {
   return (
@@ -43,7 +44,7 @@ export default function HeroSection() {
         <div className="flex-1 flex flex-row items-start justify-end gap-6">
           <div>
             <img
-              src="src\assets\images\heroimg.png"
+              src={heroImg}
               alt="Raj"
               className="w-full max-w-sm rounded-lg shadow-lg"
             />

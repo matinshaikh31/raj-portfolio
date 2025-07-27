@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import t1 from "../assets/images/testimonial/t1.png";
 
 const testimonials = [
   {
@@ -6,14 +7,14 @@ const testimonials = [
     title: "Founder's Associate @Leap",
     quote: "Raj is phenomenal. An absolute pleasure to work with!",
     tags: ["Web Design", "Web Development", "SEO"],
-    image: "src/assets/images/testimonial/t1.png",
+    image: t1,
   },
   {
     name: "John Doe",
     title: "CEO @StartupX",
     quote: "Raj is an outstanding collaborator. Delivered top quality.",
     tags: ["UX Audit", "Optimization"],
-    image: "src/assets/images/testimonial/t1.png",
+    image: t1,
   },
 ];
 

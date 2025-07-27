@@ -1,36 +1,42 @@
 import React from "react";
 import ProjectCard from "./card/ProjectCard";
+import w1 from "../assets/images/work/w1.png";
+import w2 from "../assets/images/work/w2.png";
+import w3 from "../assets/images/work/w3.png";
+import w4 from "../assets/images/work/w4.png";
+import w5 from "../assets/images/work/w5.png";
+import nuv from "../assets/images/work/nuv.png";
 
 const projects = [
   {
     title: "Tech Expo",
     subtitle: "Branding / Identity / UX",
     year: "2024",
-    image: "src/assets/images/work/w1.png",
+    image: w1,
   },
   {
     title: "Honigdachs",
     subtitle: "UI/UX Design / Agency Website",
     year: "2024",
-    image: "src/assets/images/work/w2.png",
+    image: w2,
   },
   {
     title: "Unboxing Community",
     subtitle: "App design / Consumer strategy",
     year: "2023",
-    image: "src/assets/images/work/w3.png",
+    image: w3,
   },
   {
     title: "Motion Design",
     subtitle: "Motion / Micro Interaction",
     year: "2019",
-    image: "src/assets/images/work/w4.png",
+    image: w4,
   },
   {
     title: "Neuramonks",
     subtitle: "UI/UX design / Motion Design",
     year: "2017",
-    image: "src/assets/images/work/w5.png",
+    image: w5,
   },
 ];
 
@@ -98,7 +104,7 @@ export default function FeaturedWork() {
           />
         </div>
       </div>
-      <img src="src/assets/images/work/nuv.png" alt="Line" className="w-full" />
+      <img src={nuv} alt="Line" className="w-full" />
     </section>
   );
 }
